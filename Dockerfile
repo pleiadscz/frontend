@@ -12,8 +12,8 @@ RUN apt-get update && apt-get install -y git --no-install-recommends && rm -rf /
 # Copy package files first for better caching
 COPY package.json package-lock.json* ./
 
-# Install dependencies
-RUN npm ci
+# Install dependencies (npm install handles stale lockfiles gracefully)
+RUN npm install
 
 # Copy source code
 COPY . .
