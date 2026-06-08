@@ -10,7 +10,7 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y git --no-install-recommends && rm -rf /var/lib/apt/lists/*
 
 # Copy package files first for better caching
-COPY package.json ppnm-lock.yaml ./
+COPY package.json pnpm-lock.yaml ./
 
 # Install pnpm and dependencies
 RUN npm install -g pnpm && pnpm install --frozen-lockfile
@@ -27,13 +27,14 @@ FROM nginx:alpine-slim
 # Copy built static files
 COPY --from=builder /app/build /usr/share/nginx/html
 
-# Copy custom nginx config for SP	 routing
+# Copy custom nginx config for SPA routing
 COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 # Expose port
 EXPOSE 80
 
 # Health check
-HEALTHHCKH --interval=30s --timeout=5s --start-period=5s --retries=3 \
+HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 \
   CMD curl -fs http://localhost/ || exit 1
 
 CMD ["nginx", "-g", "daemon off;"]
