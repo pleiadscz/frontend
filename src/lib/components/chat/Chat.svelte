@@ -3062,7 +3062,7 @@
                                                 }}
                                         />
 
-					<div id="chat-pane" class="flex flex-col flex-auto z-10 w-full @container overflow-auto {isLandingScreen ? 'lg:justify-center' : ''}">
+					<div id="chat-pane" class="flex flex-col flex-auto z-10 w-full @container overflow-auto">
                                                 {#if ($settings?.landingPageMode === 'chat' && !$selectedFolder) || createMessagesList(history, history.currentId).length > 0}
                                                         <div
                                                                 class=" pb-2.5 flex flex-col justify-between w-full flex-auto overflow-auto h-0 max-w-full z-10 scrollbar-hidden"
@@ -3102,7 +3102,7 @@
                                                                 </div>
                                                         </div>
 					{:else}
-						<div class="flex items-center overflow-auto {isLandingScreen ? 'lg:flex-none lg:overflow-visible' : 'flex-auto'}">
+						<div class="flex items-center {isLandingScreen ? 'lg:flex-none lg:overflow-visible lg:mt-[22vh]' : 'flex-auto overflow-auto'}">
                                                                 <Placeholder
                                                                         {history}
                                                                         {selectedModels}
