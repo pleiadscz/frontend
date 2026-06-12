@@ -43,7 +43,7 @@
         $: models = selectedModels.map((id) => $_models.find((m) => m.id === id));
 </script>
 
-<div class="m-auto w-full max-w-6xl px-2 @2xl:px-20 translate-y-6 py-24 lg:py-6 text-center">
+<div class="m-auto w-full max-w-6xl px-2 @2xl:px-20 py-24 lg:py-0 text-center">
         {#if $temporaryChatEnabled}
                 <Tooltip
                         content={$i18n.t("This chat won't appear in history and your messages will not be saved.")}
@@ -143,7 +143,7 @@
                         <FolderPlaceholder folder={$selectedFolder} />
                 </div>
         {:else}
-                <div class="mx-auto max-w-2xl font-primary mt-2" in:fade={{ duration: 200, delay: 200 }}>
+                <div class="mx-auto max-w-2xl font-primary mt-2 lg:mt-1" in:fade={{ duration: 200, delay: 200 }}>
                         <div class="mx-5">
                                 <Suggestions
                                         suggestionPrompts={atSelectedModel?.info?.meta?.suggestion_prompts ??

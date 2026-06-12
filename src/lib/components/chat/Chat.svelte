@@ -3102,7 +3102,7 @@
                                                                 </div>
                                                         </div>
 					{:else}
-						<div class="flex items-center flex-auto overflow-auto {isLandingScreen ? 'lg:flex-initial lg:overflow-visible' : ''}">
+						<div class="flex items-center overflow-auto {isLandingScreen ? 'lg:flex-none lg:overflow-visible' : 'flex-auto'}">
                                                                 <Placeholder
                                                                         {history}
                                                                         {selectedModels}
@@ -3113,7 +3113,7 @@
                                                         </div>
                                                 {/if}
 
-                                                <div class=" pb-2 {dragged ? 'z-0' : 'z-10'}">
+                                                <div class="{isLandingScreen ? '' : 'pb-2'} {dragged ? 'z-0' : 'z-10'}">
                                                         <MessageInput
                                                                 bind:this={messageInput}
                                                                 {history}

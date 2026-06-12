@@ -80,7 +80,7 @@
 	{/if}
 </div>
 
-<div class="h-40 w-full">
+<div class="w-full lg:h-auto h-40">
 	{#if filteredPrompts.length > 0}
 		<div role="list" class="max-h-40 overflow-auto scrollbar-none items-start {className}">
 			{#each filteredPrompts as prompt, idx (prompt.id || `${prompt.content}-${idx}`)}
