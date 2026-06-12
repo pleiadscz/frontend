@@ -195,8 +195,8 @@
                                                         on:click|stopPropagation={() => { drawerOpen = true; }}
                                                         class="flex h-[47px] w-[47px] shrink-0 items-center justify-center rounded-full border-[0.5px] border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 text-black dark:text-neutral-200 shadow-[0_4px_24px_rgba(0,0,0,0.10)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.4)] hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
                                                 >
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
-                                                                <path d="M9.335 16.5v-5.835H3.5a.665.665 0 1 1 0-1.33h5.835V3.5a.665.665 0 0 1 1.33 0v5.835H16.5l.134.014a.665.665 0 0 1 0 1.302l-.134.014h-5.835V16.5a.665.665 0 1 1-1.33 0Z" />
+                                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M12 3.59998C12.5891 3.59998 13.0666 4.07754 13.0666 4.66664V10.9333H19.3333C19.9224 10.9333 20.4 11.4109 20.4 12C20.4 12.5891 19.9224 13.0666 19.3333 13.0666H13.0666V19.3333C13.0666 19.9224 12.5891 20.4 12 20.4C11.4109 20.4 10.9333 19.9224 10.9333 19.3333V13.0666H4.66664C4.07754 13.0666 3.59998 12.5891 3.59998 12C3.59998 11.4109 4.07754 10.9333 4.66664 10.9333H10.9333V4.66664C10.9333 4.07754 11.4109 3.59998 12 3.59998Z" fill="currentColor"/>
                                                         </svg>
                                                 </button>
                                         {/if}
@@ -213,8 +213,8 @@
                                                                         on:click|stopPropagation={() => { dropdownOpen = !dropdownOpen; }}
                                                                         class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-black dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
                                                                 >
-                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
-                                                                                <path d="M9.335 16.5v-5.835H3.5a.665.665 0 1 1 0-1.33h5.835V3.5a.665.665 0 0 1 1.33 0v5.835H16.5l.134.014a.665.665 0 0 1 0 1.302l-.134.014h-5.835V16.5a.665.665 0 1 1-1.33 0Z" />
+                                                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                                                <path d="M12 3.59998C12.5891 3.59998 13.0666 4.07754 13.0666 4.66664V10.9333H19.3333C19.9224 10.9333 20.4 11.4109 20.4 12C20.4 12.5891 19.9224 13.0666 19.3333 13.0666H13.0666V19.3333C13.0666 19.9224 12.5891 20.4 12 20.4C11.4109 20.4 10.9333 19.9224 10.9333 19.3333V13.0666H4.66664C4.07754 13.0666 3.59998 12.5891 3.59998 12C3.59998 11.4109 4.07754 10.9333 4.66664 10.9333H10.9333V4.66664C10.9333 4.07754 11.4109 3.59998 12 3.59998Z" fill="currentColor"/>
                                                                         </svg>
                                                                 </button>
 
@@ -287,9 +287,9 @@
                                                                 on:click|stopPropagation={() => { drawerOpen = true; }}
                                                                 class="flex h-[34px] w-[34px] shrink-0 items-center justify-center rounded-full text-black dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
                                                         >
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
-                                                                        <path d="M9.335 16.5v-5.835H3.5a.665.665 0 1 1 0-1.33h5.835V3.5a.665.665 0 0 1 1.33 0v5.835H16.5l.134.014a.665.665 0 0 1 0 1.302l-.134.014h-5.835V16.5a.665.665 0 1 1-1.33 0Z" />
-                                                                </svg>
+                                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M12 3.59998C12.5891 3.59998 13.0666 4.07754 13.0666 4.66664V10.9333H19.3333C19.9224 10.9333 20.4 11.4109 20.4 12C20.4 12.5891 19.9224 13.0666 19.3333 13.0666H13.0666V19.3333C13.0666 19.9224 12.5891 20.4 12 20.4C11.4109 20.4 10.9333 19.9224 10.9333 19.3333V13.0666H4.66664C4.07754 13.0666 3.59998 12.5891 3.59998 12C3.59998 11.4109 4.07754 10.9333 4.66664 10.9333H10.9333V4.66664C10.9333 4.07754 11.4109 3.59998 12 3.59998Z" fill="currentColor"/>
+                                                        </svg>
                                                         </button>
                                                 {/if}
 

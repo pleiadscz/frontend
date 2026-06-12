@@ -39,6 +39,8 @@
  */
 declare module '$env/static/private' {
 	export const AI_GATEWAY_API_KEY: string;
+	export const VERCEL_WEB_ANALYTICS_ID: string;
+	export const VERCEL_OIDC_TOKEN: string;
 	export const V0_RUNTIME_URL: string;
 	export const V0_CALLBACK_URL: string;
 	export const V0_CODE_SERVER_CALLBACK_URL: string;
@@ -220,6 +222,8 @@ declare module '$env/static/public' {
 declare module '$env/dynamic/private' {
 	export const env: {
 		AI_GATEWAY_API_KEY: string;
+		VERCEL_WEB_ANALYTICS_ID: string;
+		VERCEL_OIDC_TOKEN: string;
 		V0_RUNTIME_URL: string;
 		V0_CALLBACK_URL: string;
 		V0_CODE_SERVER_CALLBACK_URL: string;

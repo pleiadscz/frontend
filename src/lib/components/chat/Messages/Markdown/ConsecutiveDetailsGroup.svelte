@@ -6,7 +6,6 @@
 
         import ChevronUp from '$lib/components/icons/ChevronUp.svelte';
         import ChevronDown from '$lib/components/icons/ChevronDown.svelte';
-        import Spinner from '$lib/components/common/Spinner.svelte';
         import WrenchSolid from '$lib/components/icons/WrenchSolid.svelte';
         import Sparkles from '$lib/components/icons/Sparkles.svelte';
         import CheckCircle from '$lib/components/icons/CheckCircle.svelte';
@@ -121,10 +120,9 @@
         >
                 <div class="flex items-center gap-1.5">
                         <!-- Status icon -->
-                        {#if hasPending}
-                                <div>
-                                        <Spinner className="size-4" />
-                                </div>
+        {#if hasPending}
+                        <div>
+                        </div>
                         {:else if toolCallCount > 0}
                                 <div class="text-emerald-500 dark:text-emerald-400">
                                         <CheckCircle className="size-4" strokeWidth="2" />
