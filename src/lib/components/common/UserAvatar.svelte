@@ -17,7 +17,7 @@
 </script>
 
 <div class="{className} relative rounded-full overflow-hidden flex items-center justify-center select-none">
-	<!-- Hardcoded yellow circle SVG background -->
+	<!-- Hardcoded yellow circle SVG background with scalable initials -->
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		width="320"
@@ -27,12 +27,17 @@
 		aria-hidden="true"
 	>
 		<circle cx="160" cy="160" r="148" fill="#f1c40e" />
+		<text
+			x="160"
+			y="160"
+			text-anchor="middle"
+			dominant-baseline="central"
+			fill="#fff"
+			font-size="120"
+			font-weight="200"
+			letter-spacing="2"
+		>
+			{initials}
+		</text>
 	</svg>
-	<!-- Initials overlay -->
-	<span
-		class="relative z-10 text-white leading-none tracking-wide"
-		style="font-weight: 200; color: #fff; font-size: 16px;"
-	>
-		{initials}
-	</span>
 </div>
