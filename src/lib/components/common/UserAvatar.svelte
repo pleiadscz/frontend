@@ -26,12 +26,12 @@
 		class="absolute inset-0 w-full h-full"
 		aria-hidden="true"
 	>
-		<circle cx="160" cy="160" r="148" fill="#F0C020" />
+		<circle cx="160" cy="160" r="148" fill="#f1c40e" />
 	</svg>
 	<!-- Initials overlay -->
 	<span
-		class="relative z-10 font-semibold text-white leading-none"
-		style="font-size: clamp(0.55rem, 35%, 1.1rem);"
+		class="relative z-10 text-white leading-none tracking-wide"
+		style="font-weight: 200; color: #fff; font-size: 33%;"
 	>
 		{initials}
 	</span>

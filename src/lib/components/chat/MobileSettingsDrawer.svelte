@@ -5,6 +5,7 @@
 	import { config, user } from '$lib/stores';
 
 	import Drawer from '../common/Drawer.svelte';
+	import UserAvatar from '../common/UserAvatar.svelte';
 
 	import Account from './Settings/Account.svelte';
 	import General from './Settings/General.svelte';
@@ -30,12 +31,6 @@
 	export let saveSettings: Function;
 
 	let selectedTab: string | null = null;
-
-	const userInitials = $user?.name
-		? $user.name.slice(0, 2).toUpperCase()
-		: $user?.email
-			? $user.email.slice(0, 2).toUpperCase()
-			: 'U';
 
 	const userName = $user?.name || $user?.email || '';
 
@@ -141,17 +136,7 @@
 		<!-- Profile -->
 		{#if $user && !selectedTab}
 			<div class="flex flex-col items-center pt-3 pb-5 flex-shrink-0">
-				<div
-					class="w-[76px] h-[76px] rounded-full overflow-hidden flex items-center justify-center flex-shrink-0"
-					style="background-color: #f1c40e;"
-				>
-					<span
-						class="text-[25px] text-white tracking-wide leading-none text-center flex items-center justify-center w-full h-full"
-						style="font-weight: 200; color: #fff;"
-					>
-						{userInitials}
-					</span>
-				</div>
+				<UserAvatar name={userName} className="w-[76px] h-[76px]" />
 				<span class="mt-2.5 text-[17px] font-semibold text-gray-900 dark:text-white">{userName}</span>
 			</div>
 		{/if}
