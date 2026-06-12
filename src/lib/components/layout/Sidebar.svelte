@@ -804,11 +804,20 @@
 						aria-label={$showSidebar ? $i18n.t('Close Sidebar') : $i18n.t('Open Sidebar')}
 					>
 						<div class=" self-center flex items-center justify-center size-9">
-							<img
-								src="{WEBUI_BASE_URL}/static/favicon.png"
-								class="sidebar-new-chat-icon size-6 rounded-full group-hover:hidden"
-								alt=""
-							/>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="currentColor"
+								fill-rule="evenodd"
+								viewBox="0 0 24 24"
+								class="sidebar-new-chat-icon size-6 text-gray-850 dark:text-white group-hover:hidden"
+								aria-hidden="true"
+							>
+								<path
+									clip-rule="evenodd"
+									d="M17.697 12c0 4.97-3.962 9-8.849 9C3.962 21 0 16.97 0 12s3.962-9 8.848-9c4.887 0 8.849 4.03 8.849 9zm-3.636 0c0 2.928-2.334 5.301-5.213 5.301-2.878 0-5.212-2.373-5.212-5.301S5.97 6.699 8.848 6.699c2.88 0 5.213 2.373 5.213 5.301z"
+								/>
+								<path d="M24 3h-3.394v18H24V3z" />
+							</svg>
 
 							<Sidebar className="size-5 hidden group-hover:flex" />
 						</div>
@@ -1007,12 +1016,20 @@
 					draggable="false"
 					on:click={newChatHandler}
 				>
-					<img
-						crossorigin="anonymous"
-						src="{WEBUI_BASE_URL}/static/favicon.png"
-						class="sidebar-new-chat-icon size-6 rounded-full"
-						alt=""
-					/>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="currentColor"
+						fill-rule="evenodd"
+						viewBox="0 0 24 24"
+						class="sidebar-new-chat-icon size-6 text-gray-850 dark:text-white"
+						aria-hidden="true"
+					>
+						<path
+							clip-rule="evenodd"
+							d="M17.697 12c0 4.97-3.962 9-8.849 9C3.962 21 0 16.97 0 12s3.962-9 8.848-9c4.887 0 8.849 4.03 8.849 9zm-3.636 0c0 2.928-2.334 5.301-5.213 5.301-2.878 0-5.212-2.373-5.212-5.301S5.97 6.699 8.848 6.699c2.88 0 5.213 2.373 5.213 5.301z"
+						/>
+						<path d="M24 3h-3.394v18H24V3z" />
+					</svg>
 				</a>
 
 				<a href="/" class="flex flex-1 px-0.5" on:click={newChatHandler}>

@@ -34,7 +34,6 @@
 
 	import ChevronUp from '../icons/ChevronUp.svelte';
 	import ChevronDown from '../icons/ChevronDown.svelte';
-	import Spinner from './Spinner.svelte';
 
 	export let open = false;
 
@@ -80,11 +79,7 @@
 					: ''}
 			"
 			>
-				{#if attributes?.done && attributes?.done !== 'true' && !messageDone}
-					<div>
-						<Spinner className="size-4" />
-					</div>
-				{/if}
+	
 
 				<div class="">
 					{#if attributes?.type === 'reasoning'}

@@ -1070,7 +1070,11 @@
                 }
         };
 
-        $: onHistoryChange(history);
+	$: onHistoryChange(history);
+
+	$: isLandingScreen =
+		!(($settings?.landingPageMode === 'chat' && !$selectedFolder) ||
+			createMessagesList(history, history.currentId).length > 0) && !$selectedFolder;
 
         const getContents = () => {
                 const messages = history ? createMessagesList(history, history.currentId) : [];
@@ -3058,7 +3062,7 @@
                                                 }}
                                         />
 
-                                        <div id="chat-pane" class="flex flex-col flex-auto z-10 w-full @container overflow-auto">
+					<div id="chat-pane" class="flex flex-col flex-auto z-10 w-full @container overflow-auto">
                                                 {#if ($settings?.landingPageMode === 'chat' && !$selectedFolder) || createMessagesList(history, history.currentId).length > 0}
                                                         <div
                                                                 class=" pb-2.5 flex flex-col justify-between w-full flex-auto overflow-auto h-0 max-w-full z-10 scrollbar-hidden"
@@ -3097,8 +3101,8 @@
                                                                         />
                                                                 </div>
                                                         </div>
-                                                {:else}
-                                                        <div class="flex items-center flex-auto overflow-auto">
+					{:else}
+						<div class="flex items-center {isLandingScreen ? 'lg:flex-none lg:overflow-visible lg:mt-[32vh]' : 'flex-auto overflow-auto'}">
                                                                 <Placeholder
                                                                         {history}
                                                                         {selectedModels}
@@ -3109,7 +3113,7 @@
                                                         </div>
                                                 {/if}
 
-                                                <div class=" pb-2 {dragged ? 'z-0' : 'z-10'}">
+                                                <div class="{isLandingScreen ? '' : 'pb-2'} {dragged ? 'z-0' : 'z-10'}">
                                                         <MessageInput
                                                                 bind:this={messageInput}
                                                                 {history}
