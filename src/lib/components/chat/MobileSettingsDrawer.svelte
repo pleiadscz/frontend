@@ -146,7 +146,8 @@
 					style="background-color: #f1c40e;"
 				>
 					<span
-						class="font-light text-[25px] text-white tracking-wide leading-none text-center flex items-center justify-center w-full h-full"
+						class="text-[25px] text-white tracking-wide leading-none text-center flex items-center justify-center w-full h-full"
+						style="font-weight: 200; color: #fff;"
 					>
 						{userInitials}
 					</span>
