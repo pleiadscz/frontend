@@ -1,0 +1,1 @@
+import{D as t,n as u}from"./root.js";import{w as n}from"./render-context.js";function s(o){t.r.on_destroy(o)}function r(){return u}function e(){n("mount")}function i(){n("unmount")}async function f(){}export{r as c,e as m,s as o,f as t,i as u};

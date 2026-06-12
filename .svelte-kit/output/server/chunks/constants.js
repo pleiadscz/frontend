@@ -1,0 +1,1 @@
+const s="Open WebUI",t="https://pleiads-open-webui-backend.hf.space",a="connect",e=t,_=`${e}/api/v1`,n=`${e}/api/v1/audio`,o=`${e}/api/v1/retrieval`,i={file_context:!0,vision:!0,file_upload:!0,web_search:!0,image_generation:!0,code_interpreter:!0,terminal:!0,citations:!0,status_updates:!0,usage:void 0,builtin_tools:!0};export{n as A,i as D,a as E,o as R,e as W,_ as a,s as b};

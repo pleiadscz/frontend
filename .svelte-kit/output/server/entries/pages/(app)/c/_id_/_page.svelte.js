@@ -1,0 +1,1 @@
+import{c as a,u as p}from"../../../../../chunks/root.js";import{p as t}from"../../../../../chunks/stores.js";import{C as e}from"../../../../../chunks/Chat.js";function c(r,m){r.component(s=>{var o;e(s,{chatIdProp:a(o??={},"$page",t).params.id}),o&&p(o)})}export{c as default};
