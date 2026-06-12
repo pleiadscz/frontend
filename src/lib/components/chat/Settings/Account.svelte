@@ -4,18 +4,13 @@
 
 	import { user, config, settings } from '$lib/stores';
 	import { updateUserProfile, createAPIKey, getAPIKey, getSessionUser } from '$lib/apis/auths';
-	import { WEBUI_BASE_URL } from '$lib/constants';
 
 	import UpdatePassword from './Account/UpdatePassword.svelte';
-	import { getGravatarUrl } from '$lib/apis/utils';
-	import { generateInitialsImage, canvasPixelTest } from '$lib/utils';
 	import { copyToClipboard } from '$lib/utils';
 	import Plus from '$lib/components/icons/Plus.svelte';
 	import Tooltip from '$lib/components/common/Tooltip.svelte';
 	import SensitiveInput from '$lib/components/common/SensitiveInput.svelte';
 	import Textarea from '$lib/components/common/Textarea.svelte';
-	import User from '$lib/components/icons/User.svelte';
-	import UserProfileImage from './Account/UserProfileImage.svelte';
 
 	const i18n = getContext('i18n');
 
@@ -24,7 +19,6 @@
 
 	let loaded = false;
 
-	let profileImageUrl = '';
 	let name = '';
 	let bio = '';
 
@@ -39,15 +33,8 @@
 
 	let APIKey = '';
 	let APIKeyCopied = false;
-	let profileImageInputElement: HTMLInputElement;
 
 	const submitHandler = async () => {
-		if (name !== $user?.name) {
-			if (profileImageUrl === generateInitialsImage($user?.name) || profileImageUrl === '') {
-				profileImageUrl = generateInitialsImage(name);
-			}
-		}
-
 		if (webhookUrl !== $settings?.notifications?.webhook_url) {
 			saveSettings({
 				notifications: {
@@ -59,7 +46,6 @@
 
 		const updatedUser = await updateUserProfile(localStorage.token, {
 			name: name,
-			profile_image_url: profileImageUrl,
 			bio: bio ? bio : null,
 			gender: gender ? gender : null,
 			date_of_birth: dateOfBirth ? dateOfBirth : null
@@ -97,7 +83,6 @@
 
 		if (user) {
 			name = user?.name ?? '';
-			profileImageUrl = user?.profile_image_url ?? '';
 			bio = user?.bio ?? '';
 
 			_gender = user?.gender ?? '';
@@ -138,8 +123,6 @@
 			<!-- <div class=" text-sm font-medium">{$i18n.t('Account')}</div> -->
 
 			<div class="flex space-x-5 my-4">
-				<UserProfileImage bind:profileImageUrl user={$user} />
-
 				<div class="flex flex-1 flex-col">
 					<div class=" flex-1">
 						<div class="flex flex-col w-full">
