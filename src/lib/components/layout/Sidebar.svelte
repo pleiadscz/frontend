@@ -809,7 +809,7 @@
 								fill="currentColor"
 								fill-rule="evenodd"
 								viewBox="0 0 24 24"
-								class="sidebar-new-chat-icon size-6 text-gray-850 dark:text-white group-hover:hidden"
+								class="sidebar-new-chat-icon size-5 text-gray-850 dark:text-white group-hover:hidden"
 								aria-hidden="true"
 							>
 								<path
@@ -1021,7 +1021,7 @@
 						fill="currentColor"
 						fill-rule="evenodd"
 						viewBox="0 0 24 24"
-						class="sidebar-new-chat-icon size-6 text-gray-850 dark:text-white"
+						class="sidebar-new-chat-icon size-5 text-gray-850 dark:text-white"
 						aria-hidden="true"
 					>
 						<path
