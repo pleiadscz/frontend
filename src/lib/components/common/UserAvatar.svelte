@@ -31,7 +31,7 @@
 	<!-- Initials overlay -->
 	<span
 		class="relative z-10 text-white leading-none tracking-wide"
-		style="font-weight: 200; color: #fff; font-size: 33%;"
+		style="font-weight: 200; color: #fff; font-size: 16px;"
 	>
 		{initials}
 	</span>
