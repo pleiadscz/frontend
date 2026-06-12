@@ -6,11 +6,18 @@
 
 	function getInitials(fullName: string): string {
 		const sanitized = (fullName ?? '').trim();
-		if (!sanitized) return '?';
-		const parts = sanitized.split(' ');
-		const first = sanitized[0];
-		const last = parts.length > 1 ? parts[parts.length - 1][0] : '';
-		return (first + last).toUpperCase();
+		if (!sanitized) return '??';
+		const parts = sanitized.split(/\s+/).filter(Boolean);
+		let initials: string;
+		if (parts.length > 1) {
+			initials = parts[0][0] + parts[parts.length - 1][0];
+		} else {
+			initials = sanitized.slice(0, 2);
+		}
+		if (initials.length < 2) {
+			initials = (initials + sanitized.slice(1, 2) + 'X').slice(0, 2);
+		}
+		return initials.toUpperCase();
 	}
 
 	$: initials = getInitials(name);
