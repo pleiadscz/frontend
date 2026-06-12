@@ -1,0 +1,1 @@
+import{W as a}from"./constants.js";const s="/favicon.png";function i(t){return!t||t===""?`${a}${s}`:t.startsWith(a)||t.startsWith("https://www.gravatar.com/avatar/")||t.startsWith("data:")||t.startsWith("/")?t:`${a}${s}`}export{i as s};

@@ -1,0 +1,1 @@
+import{o as t}from"../../../chunks/root.js";import"@sveltejs/kit/internal";import"../../../chunks/exports.js";import"../../../chunks/utils.js";import"@sveltejs/kit/internal/server";import"../../../chunks/state.svelte.js";import"../../../chunks/index2.js";function f(p,i){p.component(o=>{t("i18n"),o.push("<!--[-1-->"),o.push("<!--]-->")})}export{f as default};
