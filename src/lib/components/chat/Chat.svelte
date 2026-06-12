@@ -3102,7 +3102,7 @@
                                                                 </div>
                                                         </div>
 					{:else}
-						<div class="flex items-center {isLandingScreen ? 'lg:flex-none lg:overflow-visible lg:mt-[22vh]' : 'flex-auto overflow-auto'}">
+						<div class="flex items-center {isLandingScreen ? 'lg:flex-none lg:overflow-visible lg:mt-[32vh]' : 'flex-auto overflow-auto'}">
                                                                 <Placeholder
                                                                         {history}
                                                                         {selectedModels}
