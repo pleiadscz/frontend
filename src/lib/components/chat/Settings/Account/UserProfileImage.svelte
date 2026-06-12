@@ -8,6 +8,7 @@
 	import { canvasPixelTest, generateInitialsImage } from '$lib/utils';
 
 	import { WEBUI_BASE_URL } from '$lib/constants';
+	import UserAvatar from '$lib/components/common/UserAvatar.svelte';
 
 	export let profileImageUrl;
 	export let user = null;
@@ -15,6 +16,11 @@
 	export let imageClassName = 'size-14 md:size-18';
 
 	let profileImageInputElement;
+
+	$: hasCustomImage =
+		profileImageUrl !== '' &&
+		profileImageUrl !== `${WEBUI_BASE_URL}/user.png` &&
+		profileImageUrl !== generateInitialsImage(user?.name);
 </script>
 
 <input
@@ -88,11 +94,15 @@
 				profileImageInputElement.click();
 			}}
 		>
-			<img
-				src={profileImageUrl !== '' ? profileImageUrl : generateInitialsImage(user?.name)}
-				alt="profile"
-				class=" rounded-full {imageClassName} object-cover"
-			/>
+			{#if hasCustomImage}
+				<img
+					src={profileImageUrl}
+					alt="profile"
+					class=" rounded-full {imageClassName} object-cover"
+				/>
+			{:else}
+				<UserAvatar name={user?.name} className={imageClassName} />
+			{/if}
 
 			<div class="absolute bottom-0 right-0 opacity-0 group-hover:opacity-100 transition">
 				<div class="p-1 rounded-full bg-white text-black border-gray-100 shadow">
